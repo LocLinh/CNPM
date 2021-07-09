@@ -2,7 +2,7 @@ Làm theo các bước sau đây:
 
 B1: Chọn tool -> connect to database
 
-![B1](steps"/1.png)
+![B1](steps/1.png)
 
 B2: Chọn Microsoft SQL server
 
