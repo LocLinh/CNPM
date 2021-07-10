@@ -8,9 +8,10 @@ namespace App1
 {
     public class DSKHForm10
     {
-        public string MAKHACHHANG { get; set; }
+
+        public string MASOTIETKIEM { get; set; }
+        public string TENLOAITIETKIEM { get; set; }
         public string TENKHACHHANG { get; set; }
-        public string DIACHI { get; set; }
-        public int CMND { get; set; }
+        public int SODU { get; set; }
     }
 }

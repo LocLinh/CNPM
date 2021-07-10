@@ -30,12 +30,12 @@ namespace App1
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.MaphieuLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.FindButton = new System.Windows.Forms.Button();
+            this.CMNDFindBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -48,14 +48,14 @@ namespace App1
             this.label1.TabIndex = 0;
             this.label1.Text = "Phiếu gởi tiền";
             // 
-            // label2
+            // MaphieuLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(398, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mã phiếu: <hệ thống tự động>";
+            this.MaphieuLabel.AutoSize = true;
+            this.MaphieuLabel.Location = new System.Drawing.Point(398, 47);
+            this.MaphieuLabel.Name = "MaphieuLabel";
+            this.MaphieuLabel.Size = new System.Drawing.Size(172, 15);
+            this.MaphieuLabel.TabIndex = 1;
+            this.MaphieuLabel.Text = "Mã phiếu: <hệ thống tự động>";
             // 
             // label3
             // 
@@ -77,44 +77,46 @@ namespace App1
             this.label4.TabIndex = 3;
             this.label4.Text = "CMND/CCCD (*):";
             // 
-            // button1
+            // CloseButton
             // 
-            this.button1.Location = new System.Drawing.Point(507, 217);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Đóng";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CloseButton.Location = new System.Drawing.Point(507, 217);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 4;
+            this.CloseButton.Text = "Đóng";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // button2
+            // FindButton
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(248, 205);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 35);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Tìm kiếm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.FindButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FindButton.Location = new System.Drawing.Point(248, 205);
+            this.FindButton.Name = "FindButton";
+            this.FindButton.Size = new System.Drawing.Size(118, 35);
+            this.FindButton.TabIndex = 5;
+            this.FindButton.Text = "Tìm kiếm";
+            this.FindButton.UseVisualStyleBackColor = true;
+            this.FindButton.Click += new System.EventHandler(this.FindButton_Click);
             // 
-            // textBox1
+            // CMNDFindBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(253, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 23);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "Nhập thông tin";
+            this.CMNDFindBox.Location = new System.Drawing.Point(253, 137);
+            this.CMNDFindBox.Name = "CMNDFindBox";
+            this.CMNDFindBox.Size = new System.Drawing.Size(146, 23);
+            this.CMNDFindBox.TabIndex = 6;
+            this.CMNDFindBox.Text = "Nhập thông tin";
             // 
             // PhieuGoiTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 252);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CMNDFindBox);
+            this.Controls.Add(this.FindButton);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.MaphieuLabel);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -128,11 +130,11 @@ namespace App1
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label MaphieuLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button FindButton;
+        private System.Windows.Forms.TextBox CMNDFindBox;
     }
 }

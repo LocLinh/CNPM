@@ -37,13 +37,11 @@ namespace App1
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.DiaChiCuThe = new System.Windows.Forms.TextBox();
-            this.PhuongBox = new System.Windows.Forms.ComboBox();
-            this.QuanBox = new System.Windows.Forms.ComboBox();
             this.TinhBox = new System.Windows.Forms.ComboBox();
             this.HotenBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerSTK = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -61,6 +59,8 @@ namespace App1
             this.label15 = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.QuanBox = new System.Windows.Forms.TextBox();
+            this.PhuongBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -90,18 +90,18 @@ namespace App1
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.PhuongBox);
+            this.groupBox1.Controls.Add(this.QuanBox);
             this.groupBox1.Controls.Add(this.CMND_k_Box);
             this.groupBox1.Controls.Add(this.CMNDBox);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.DiaChiCuThe);
-            this.groupBox1.Controls.Add(this.PhuongBox);
-            this.groupBox1.Controls.Add(this.QuanBox);
             this.groupBox1.Controls.Add(this.TinhBox);
             this.groupBox1.Controls.Add(this.HotenBox);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dateTimePickerSTK);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
@@ -160,85 +160,6 @@ namespace App1
             this.DiaChiCuThe.Name = "DiaChiCuThe";
             this.DiaChiCuThe.Size = new System.Drawing.Size(464, 46);
             this.DiaChiCuThe.TabIndex = 17;
-            this.DiaChiCuThe.Text = "Nhập địa chỉ cụ thể (số nhà, tên tòa nhà, tên đường, tên khu vực)";
-            // 
-            // PhuongBox
-            // 
-            this.PhuongBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PhuongBox.FormattingEnabled = true;
-            this.PhuongBox.Items.AddRange(new object[] {
-            "An Khánh",
-            "An Lợi Đông",
-            "An Phú",
-            "Bình Chiểu",
-            "Bình Thọ",
-            "Bình Trưng Đông",
-            "Bình Trưng Tây",
-            "Cát Lái",
-            "Hiệp Bình Chánh",
-            "Hiệp Bình Phước",
-            "Hiệp Phú",
-            "Linh Chiểu",
-            "Linh Đông",
-            "Linh Tây",
-            "Linh Trung",
-            "Linh Xuân",
-            "Long Bình",
-            "Long Phước",
-            "Long Thạnh Mỹ",
-            "Long Trường",
-            "Phú Hữu",
-            "Phước Bình",
-            "Phước Long",
-            "Tam Bình",
-            "Tam Phú",
-            "Tăng Nhơn Phú",
-            "Tân Phú",
-            "Thảo Điền",
-            "Thạnh Mỹ Lợi",
-            "Thủ Thiêm",
-            "Trường Thạnh",
-            "Trường Thọ"});
-            this.PhuongBox.Location = new System.Drawing.Point(250, 178);
-            this.PhuongBox.Name = "PhuongBox";
-            this.PhuongBox.Size = new System.Drawing.Size(196, 25);
-            this.PhuongBox.TabIndex = 16;
-            this.PhuongBox.Text = "Nhập phường/xã";
-            // 
-            // QuanBox
-            // 
-            this.QuanBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.QuanBox.FormattingEnabled = true;
-            this.QuanBox.Items.AddRange(new object[] {
-            "Quận 1",
-            "Quận 2",
-            "Quận 3",
-            "Quận 4",
-            "Quận 5",
-            "Quận 6",
-            "Quận 7",
-            "Quận 8",
-            "Quận 9",
-            "Quận 10",
-            "Quận 11",
-            "Quận 12",
-            "Quận Bình Thạnh",
-            "Quận Thủ Đức",
-            "Quận Gò Vấp",
-            "Quận Phú Nhuận",
-            "Quận Tân Bình",
-            "Quận Tân Phú",
-            "Quận Bình Tân",
-            "Huyện Nhà Bè",
-            "Huyện Hóc Môn",
-            "Huyện Bình Chánh",
-            "Huyện Củ Chi",
-            "Huyện Cần Giờ"});
-            this.QuanBox.Location = new System.Drawing.Point(250, 143);
-            this.QuanBox.Name = "QuanBox";
-            this.QuanBox.Size = new System.Drawing.Size(196, 25);
-            this.QuanBox.TabIndex = 15;
-            this.QuanBox.Text = "Nhập quận/huyện";
             // 
             // TinhBox
             // 
@@ -342,15 +263,15 @@ namespace App1
             this.label13.TabIndex = 11;
             this.label13.Text = "Số điện thoại:";
             // 
-            // dateTimePicker1
+            // dateTimePickerSTK
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(173, 369);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(118, 29);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dateTimePickerSTK.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerSTK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerSTK.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerSTK.Location = new System.Drawing.Point(173, 369);
+            this.dateTimePickerSTK.Name = "dateTimePickerSTK";
+            this.dateTimePickerSTK.Size = new System.Drawing.Size(130, 29);
+            this.dateTimePickerSTK.TabIndex = 10;
             // 
             // label12
             // 
@@ -531,6 +452,22 @@ namespace App1
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // QuanBox
+            // 
+            this.QuanBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.QuanBox.Location = new System.Drawing.Point(250, 144);
+            this.QuanBox.Name = "QuanBox";
+            this.QuanBox.Size = new System.Drawing.Size(196, 25);
+            this.QuanBox.TabIndex = 22;
+            // 
+            // PhuongBox
+            // 
+            this.PhuongBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PhuongBox.Location = new System.Drawing.Point(250, 179);
+            this.PhuongBox.Name = "PhuongBox";
+            this.PhuongBox.Size = new System.Drawing.Size(196, 25);
+            this.PhuongBox.TabIndex = 23;
+            // 
             // STK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -563,13 +500,11 @@ namespace App1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox DiaChiCuThe;
-        private System.Windows.Forms.ComboBox PhuongBox;
-        private System.Windows.Forms.ComboBox QuanBox;
         private System.Windows.Forms.ComboBox TinhBox;
         private System.Windows.Forms.TextBox HotenBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerSTK;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -591,5 +526,7 @@ namespace App1
         private System.Windows.Forms.TextBox TienGuiBox;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox PhuongBox;
+        private System.Windows.Forms.TextBox QuanBox;
     }
 }

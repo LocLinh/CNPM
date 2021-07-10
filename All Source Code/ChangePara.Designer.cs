@@ -37,32 +37,31 @@ namespace App1
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.tenAuto = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.loaitkBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.tenmoi1 = new System.Windows.Forms.TextBox();
+            this.laisuatmoi1 = new System.Windows.Forms.TextBox();
+            this.kyhanmoi1 = new System.Windows.Forms.TextBox();
+            this.tenmoi2 = new System.Windows.Forms.TextBox();
+            this.laisuatmoi2 = new System.Windows.Forms.TextBox();
+            this.kihanmoi2 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.laisuatAuto = new System.Windows.Forms.Label();
+            this.kyhanAuto = new System.Windows.Forms.Label();
+            this.tienhientai = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.ngayhientai = new System.Windows.Forms.Label();
+            this.tienmoi = new System.Windows.Forms.TextBox();
+            this.ngaymoi = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -140,15 +139,15 @@ namespace App1
             this.label8.TabIndex = 7;
             this.label8.Text = "- Tiền gởi tối thiểu mới:";
             // 
-            // label9
+            // tenAuto
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(177, 179);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 15);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "<Tự động>";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.tenAuto.AutoSize = true;
+            this.tenAuto.Location = new System.Drawing.Point(177, 179);
+            this.tenAuto.Name = "tenAuto";
+            this.tenAuto.Size = new System.Drawing.Size(67, 15);
+            this.tenAuto.TabIndex = 8;
+            this.tenAuto.Text = "<Tự động>";
+            this.tenAuto.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -168,14 +167,19 @@ namespace App1
             this.label11.TabIndex = 10;
             this.label11.Text = "- Thời hạn gởi hiện tại:";
             // 
-            // comboBox1
+            // loaitkBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(212, 140);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 23);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Text = "<Chọn loại kỳ hạn>";
+            this.loaitkBox.FormattingEnabled = true;
+            this.loaitkBox.Items.AddRange(new object[] {
+            "không kỳ hạn",
+            "hạn 3 tháng",
+            "hạn 6 tháng"});
+            this.loaitkBox.Location = new System.Drawing.Point(212, 140);
+            this.loaitkBox.Name = "loaitkBox";
+            this.loaitkBox.Size = new System.Drawing.Size(133, 23);
+            this.loaitkBox.TabIndex = 11;
+            this.loaitkBox.Text = "<Chọn loại kỳ hạn>";
+            this.loaitkBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -232,62 +236,53 @@ namespace App1
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // tenmoi1
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "<Nhập>";
+            this.tenmoi1.Location = new System.Drawing.Point(153, 66);
+            this.tenmoi1.Name = "tenmoi1";
+            this.tenmoi1.Size = new System.Drawing.Size(100, 23);
+            this.tenmoi1.TabIndex = 18;
+            this.tenmoi1.Text = "<Nhập>";
             // 
-            // textBox2
+            // laisuatmoi1
             // 
-            this.textBox2.Location = new System.Drawing.Point(351, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 19;
-            this.textBox2.Text = "<Nhập>";
+            this.laisuatmoi1.Location = new System.Drawing.Point(351, 69);
+            this.laisuatmoi1.Name = "laisuatmoi1";
+            this.laisuatmoi1.Size = new System.Drawing.Size(100, 23);
+            this.laisuatmoi1.TabIndex = 19;
+            this.laisuatmoi1.Text = "<Nhập>";
             // 
-            // textBox3
+            // kyhanmoi1
             // 
-            this.textBox3.Location = new System.Drawing.Point(550, 69);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 20;
-            this.textBox3.Text = "<Nhập>";
+            this.kyhanmoi1.Location = new System.Drawing.Point(550, 69);
+            this.kyhanmoi1.Name = "kyhanmoi1";
+            this.kyhanmoi1.Size = new System.Drawing.Size(100, 23);
+            this.kyhanmoi1.TabIndex = 20;
+            this.kyhanmoi1.Text = "<Nhập>";
             // 
-            // textBox7
+            // tenmoi2
             // 
-            this.textBox7.Location = new System.Drawing.Point(177, 205);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 23);
-            this.textBox7.TabIndex = 24;
-            this.textBox7.Text = "<Nhập>";
+            this.tenmoi2.Location = new System.Drawing.Point(177, 205);
+            this.tenmoi2.Name = "tenmoi2";
+            this.tenmoi2.Size = new System.Drawing.Size(100, 23);
+            this.tenmoi2.TabIndex = 24;
+            this.tenmoi2.Text = "<Nhập>";
             // 
-            // textBox8
+            // laisuatmoi2
             // 
-            this.textBox8.Location = new System.Drawing.Point(375, 205);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 23);
-            this.textBox8.TabIndex = 25;
-            this.textBox8.Text = "<Nhập>";
+            this.laisuatmoi2.Location = new System.Drawing.Point(375, 205);
+            this.laisuatmoi2.Name = "laisuatmoi2";
+            this.laisuatmoi2.Size = new System.Drawing.Size(100, 23);
+            this.laisuatmoi2.TabIndex = 25;
+            this.laisuatmoi2.Text = "<Nhập>";
             // 
-            // textBox9
+            // kihanmoi2
             // 
-            this.textBox9.Location = new System.Drawing.Point(574, 208);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 23);
-            this.textBox9.TabIndex = 26;
-            this.textBox9.Text = "<Nhập>";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(387, 139);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Xóa kỳ hạn";
-            this.button2.UseVisualStyleBackColor = true;
+            this.kihanmoi2.Location = new System.Drawing.Point(574, 208);
+            this.kihanmoi2.Name = "kihanmoi2";
+            this.kihanmoi2.Size = new System.Drawing.Size(100, 23);
+            this.kihanmoi2.TabIndex = 26;
+            this.kihanmoi2.Text = "<Nhập>";
             // 
             // label17
             // 
@@ -309,32 +304,32 @@ namespace App1
             this.label18.TabIndex = 29;
             this.label18.Text = "Thời hạn gởi tối thiểu của loại ko kì hạn:";
             // 
-            // label19
+            // laisuatAuto
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(375, 179);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(67, 15);
-            this.label19.TabIndex = 30;
-            this.label19.Text = "<Tự động>";
+            this.laisuatAuto.AutoSize = true;
+            this.laisuatAuto.Location = new System.Drawing.Point(375, 179);
+            this.laisuatAuto.Name = "laisuatAuto";
+            this.laisuatAuto.Size = new System.Drawing.Size(67, 15);
+            this.laisuatAuto.TabIndex = 30;
+            this.laisuatAuto.Text = "<Tự động>";
             // 
-            // label20
+            // kyhanAuto
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(574, 179);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(67, 15);
-            this.label20.TabIndex = 31;
-            this.label20.Text = "<Tự động>";
+            this.kyhanAuto.AutoSize = true;
+            this.kyhanAuto.Location = new System.Drawing.Point(574, 179);
+            this.kyhanAuto.Name = "kyhanAuto";
+            this.kyhanAuto.Size = new System.Drawing.Size(67, 15);
+            this.kyhanAuto.TabIndex = 31;
+            this.kyhanAuto.Text = "<Tự động>";
             // 
-            // label21
+            // tienhientai
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(247, 283);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(53, 15);
-            this.label21.TabIndex = 32;
-            this.label21.Text = "100.000đ";
+            this.tienhientai.AutoSize = true;
+            this.tienhientai.Location = new System.Drawing.Point(247, 283);
+            this.tienhientai.Name = "tienhientai";
+            this.tienhientai.Size = new System.Drawing.Size(53, 15);
+            this.tienhientai.TabIndex = 32;
+            this.tienhientai.Text = "100.000đ";
             // 
             // label22
             // 
@@ -345,30 +340,30 @@ namespace App1
             this.label22.TabIndex = 33;
             this.label22.Text = "- Thời hạn gởi mới:";
             // 
-            // label23
+            // ngayhientai
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(228, 372);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(48, 15);
-            this.label23.TabIndex = 34;
-            this.label23.Text = "15 ngày";
+            this.ngayhientai.AutoSize = true;
+            this.ngayhientai.Location = new System.Drawing.Point(228, 372);
+            this.ngayhientai.Name = "ngayhientai";
+            this.ngayhientai.Size = new System.Drawing.Size(48, 15);
+            this.ngayhientai.TabIndex = 34;
+            this.ngayhientai.Text = "15 ngày";
             // 
-            // textBox4
+            // tienmoi
             // 
-            this.textBox4.Location = new System.Drawing.Point(245, 307);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 35;
-            this.textBox4.Text = "<Nhập>";
+            this.tienmoi.Location = new System.Drawing.Point(245, 307);
+            this.tienmoi.Name = "tienmoi";
+            this.tienmoi.Size = new System.Drawing.Size(100, 23);
+            this.tienmoi.TabIndex = 35;
+            this.tienmoi.Text = "<Nhập>";
             // 
-            // textBox5
+            // ngaymoi
             // 
-            this.textBox5.Location = new System.Drawing.Point(228, 401);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 23);
-            this.textBox5.TabIndex = 36;
-            this.textBox5.Text = "<Nhập>";
+            this.ngaymoi.Location = new System.Drawing.Point(228, 401);
+            this.ngaymoi.Name = "ngaymoi";
+            this.ngaymoi.Size = new System.Drawing.Size(100, 23);
+            this.ngaymoi.TabIndex = 36;
+            this.ngaymoi.Text = "<Nhập>";
             // 
             // button3
             // 
@@ -379,6 +374,7 @@ namespace App1
             this.button3.TabIndex = 37;
             this.button3.Text = "Xác nhận thay đổi";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -388,6 +384,7 @@ namespace App1
             this.button4.TabIndex = 38;
             this.button4.Text = "Quay lại";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // ChangePara
             // 
@@ -396,32 +393,31 @@ namespace App1
             this.ClientSize = new System.Drawing.Size(800, 517);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label23);
+            this.Controls.Add(this.ngaymoi);
+            this.Controls.Add(this.tienmoi);
+            this.Controls.Add(this.ngayhientai);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
+            this.Controls.Add(this.tienhientai);
+            this.Controls.Add(this.kyhanAuto);
+            this.Controls.Add(this.laisuatAuto);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.kihanmoi2);
+            this.Controls.Add(this.laisuatmoi2);
+            this.Controls.Add(this.tenmoi2);
+            this.Controls.Add(this.kyhanmoi1);
+            this.Controls.Add(this.laisuatmoi1);
+            this.Controls.Add(this.tenmoi1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.loaitkBox);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.tenAuto);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -447,32 +443,31 @@ namespace App1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label tenAuto;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox loaitkBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox tenmoi1;
+        private System.Windows.Forms.TextBox laisuatmoi1;
+        private System.Windows.Forms.TextBox kyhanmoi1;
+        private System.Windows.Forms.TextBox tenmoi2;
+        private System.Windows.Forms.TextBox laisuatmoi2;
+        private System.Windows.Forms.TextBox kihanmoi2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label laisuatAuto;
+        private System.Windows.Forms.Label kyhanAuto;
+        private System.Windows.Forms.Label tienhientai;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label ngayhientai;
+        private System.Windows.Forms.TextBox tienmoi;
+        private System.Windows.Forms.TextBox ngaymoi;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
     }

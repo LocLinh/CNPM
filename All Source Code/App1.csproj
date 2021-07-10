@@ -65,4 +65,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="BaoCao\" />
+  </ItemGroup>
+
 </Project>

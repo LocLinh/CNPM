@@ -31,7 +31,7 @@ namespace App1
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.loaitkBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,12 +44,11 @@ namespace App1
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.soduBox = new System.Windows.Forms.ComboBox();
             this.DS.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,19 +72,19 @@ namespace App1
             this.label2.TabIndex = 1;
             this.label2.Text = "Lọc:";
             // 
-            // comboBox1
+            // loaitkBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.loaitkBox.FormattingEnabled = true;
+            this.loaitkBox.Items.AddRange(new object[] {
             "Tất cả",
             "Không kỳ hạn",
             "Hạn 3 tháng",
             "Hạn 6 tháng"});
-            this.comboBox1.Location = new System.Drawing.Point(219, 131);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 23);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.Text = "Tất cả";
+            this.loaitkBox.Location = new System.Drawing.Point(219, 131);
+            this.loaitkBox.Name = "loaitkBox";
+            this.loaitkBox.Size = new System.Drawing.Size(154, 23);
+            this.loaitkBox.TabIndex = 2;
+            this.loaitkBox.Text = "Tất cả";
             // 
             // label3
             // 
@@ -138,6 +137,7 @@ namespace App1
             // 
             // DS
             // 
+            this.DS.AutoScroll = true;
             this.DS.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.DS.ColumnCount = 5;
             this.DS.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.683654F));
@@ -151,21 +151,20 @@ namespace App1
             this.DS.Controls.Add(this.label9, 2, 0);
             this.DS.Controls.Add(this.label8, 1, 0);
             this.DS.Controls.Add(this.label7, 0, 0);
-            this.DS.Controls.Add(this.label13, 0, 2);
             this.DS.Location = new System.Drawing.Point(42, 335);
+            this.DS.MaximumSize = new System.Drawing.Size(656, 200);
             this.DS.Name = "DS";
-            this.DS.RowCount = 3;
+            this.DS.RowCount = 2;
             this.DS.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.DS.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.DS.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.DS.Size = new System.Drawing.Size(656, 79);
+            this.DS.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.DS.Size = new System.Drawing.Size(656, 140);
             this.DS.TabIndex = 9;
             // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 32);
+            this.label12.Location = new System.Drawing.Point(4, 75);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(37, 15);
             this.label12.TabIndex = 15;
@@ -221,16 +220,6 @@ namespace App1
             this.label7.TabIndex = 10;
             this.label7.Text = "STT";
             // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(4, 58);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 15);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "2";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -264,32 +253,33 @@ namespace App1
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(320, 463);
+            this.button2.Location = new System.Drawing.Point(324, 481);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 36);
             this.button2.TabIndex = 13;
             this.button2.Text = "Đóng";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox2
+            // soduBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.soduBox.FormattingEnabled = true;
+            this.soduBox.Items.AddRange(new object[] {
             "tất cả",
             "nhỏ hơn 500.000 vnđ",
             "từ 500.000 vnđ đến 5.000.000 vnd",
             "trên 5.000.000 vnđ"});
-            this.comboBox2.Location = new System.Drawing.Point(219, 172);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(286, 23);
-            this.comboBox2.TabIndex = 5;
-            this.comboBox2.Text = "tất cả";
+            this.soduBox.Location = new System.Drawing.Point(219, 172);
+            this.soduBox.Name = "soduBox";
+            this.soduBox.Size = new System.Drawing.Size(286, 23);
+            this.soduBox.TabIndex = 5;
+            this.soduBox.Text = "tất cả";
             // 
             // DSKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 512);
+            this.ClientSize = new System.Drawing.Size(731, 529);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
@@ -298,10 +288,10 @@ namespace App1
             this.Controls.Add(this.searchNameBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.soduBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.loaitkBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -319,7 +309,7 @@ namespace App1
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox loaitkBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -332,11 +322,10 @@ namespace App1
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox soduBox;
     }
 }

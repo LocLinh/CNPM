@@ -33,21 +33,22 @@ namespace App1
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.HotenLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.cmndLabel = new System.Windows.Forms.Label();
+            this.DiaChiLabel = new System.Windows.Forms.Label();
+            this.SoduLabel = new System.Windows.Forms.Label();
+            this.LTKLabel = new System.Windows.Forms.Label();
+            this.MuonGuiLable = new System.Windows.Forms.Label();
+            this.ChoseCo = new System.Windows.Forms.CheckBox();
+            this.ChoseKhong = new System.Windows.Forms.CheckBox();
+            this.infoLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.MaphieuLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -65,9 +66,9 @@ namespace App1
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(514, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 15);
+            this.label2.Size = new System.Drawing.Size(60, 15);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Mã phiếu: <hệ thống tự động>";
+            this.label2.Text = "Mã phiếu:";
             // 
             // label3
             // 
@@ -89,15 +90,15 @@ namespace App1
             this.label4.TabIndex = 4;
             this.label4.Text = "Họ tên:";
             // 
-            // label5
+            // HotenLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(245, 137);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 21);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "<hệ thống tự động>";
+            this.HotenLabel.AutoSize = true;
+            this.HotenLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HotenLabel.Location = new System.Drawing.Point(245, 137);
+            this.HotenLabel.Name = "HotenLabel";
+            this.HotenLabel.Size = new System.Drawing.Size(152, 21);
+            this.HotenLabel.TabIndex = 5;
+            this.HotenLabel.Text = "<hệ thống tự động>";
             // 
             // label6
             // 
@@ -139,85 +140,86 @@ namespace App1
             this.label9.TabIndex = 9;
             this.label9.Text = "CMND/CCCD:";
             // 
-            // label10
+            // cmndLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(245, 174);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(152, 21);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "<hệ thống tự động>";
+            this.cmndLabel.AutoSize = true;
+            this.cmndLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmndLabel.Location = new System.Drawing.Point(245, 174);
+            this.cmndLabel.Name = "cmndLabel";
+            this.cmndLabel.Size = new System.Drawing.Size(152, 21);
+            this.cmndLabel.TabIndex = 10;
+            this.cmndLabel.Text = "<hệ thống tự động>";
             // 
-            // label11
+            // DiaChiLabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(245, 210);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(152, 21);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "<hệ thống tự động>";
+            this.DiaChiLabel.AutoSize = true;
+            this.DiaChiLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DiaChiLabel.Location = new System.Drawing.Point(245, 210);
+            this.DiaChiLabel.Name = "DiaChiLabel";
+            this.DiaChiLabel.Size = new System.Drawing.Size(152, 21);
+            this.DiaChiLabel.TabIndex = 11;
+            this.DiaChiLabel.Text = "<hệ thống tự động>";
             // 
-            // label12
+            // SoduLabel
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(245, 249);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(152, 21);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "<hệ thống tự động>";
+            this.SoduLabel.AutoSize = true;
+            this.SoduLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SoduLabel.Location = new System.Drawing.Point(245, 249);
+            this.SoduLabel.Name = "SoduLabel";
+            this.SoduLabel.Size = new System.Drawing.Size(152, 21);
+            this.SoduLabel.TabIndex = 12;
+            this.SoduLabel.Text = "<hệ thống tự động>";
             // 
-            // label13
+            // LTKLabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(245, 287);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(152, 21);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "<hệ thống tự động>";
+            this.LTKLabel.AutoSize = true;
+            this.LTKLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LTKLabel.Location = new System.Drawing.Point(245, 287);
+            this.LTKLabel.Name = "LTKLabel";
+            this.LTKLabel.Size = new System.Drawing.Size(152, 21);
+            this.LTKLabel.TabIndex = 13;
+            this.LTKLabel.Text = "<hệ thống tự động>";
             // 
-            // label14
+            // MuonGuiLable
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(90, 329);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(186, 21);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "Bạn có muốn gởi tiền ko?";
+            this.MuonGuiLable.AutoSize = true;
+            this.MuonGuiLable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.MuonGuiLable.Location = new System.Drawing.Point(96, 347);
+            this.MuonGuiLable.Name = "MuonGuiLable";
+            this.MuonGuiLable.Size = new System.Drawing.Size(186, 21);
+            this.MuonGuiLable.TabIndex = 14;
+            this.MuonGuiLable.Text = "Bạn có muốn gởi tiền ko?";
             // 
-            // checkBox1
+            // ChoseCo
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(323, 333);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(41, 19);
-            this.checkBox1.TabIndex = 15;
-            this.checkBox1.Text = "Có";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ChoseCo.AutoSize = true;
+            this.ChoseCo.Location = new System.Drawing.Point(329, 351);
+            this.ChoseCo.Name = "ChoseCo";
+            this.ChoseCo.Size = new System.Drawing.Size(41, 19);
+            this.ChoseCo.TabIndex = 15;
+            this.ChoseCo.Text = "Có";
+            this.ChoseCo.UseVisualStyleBackColor = true;
+            this.ChoseCo.CheckedChanged += new System.EventHandler(this.ChoseCo_CheckedChanged);
             // 
-            // checkBox2
+            // ChoseKhong
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(411, 333);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(61, 19);
-            this.checkBox2.TabIndex = 16;
-            this.checkBox2.Text = "Không";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.ChoseKhong.AutoSize = true;
+            this.ChoseKhong.Location = new System.Drawing.Point(417, 351);
+            this.ChoseKhong.Name = "ChoseKhong";
+            this.ChoseKhong.Size = new System.Drawing.Size(61, 19);
+            this.ChoseKhong.TabIndex = 16;
+            this.ChoseKhong.Text = "Không";
+            this.ChoseKhong.UseVisualStyleBackColor = true;
+            this.ChoseKhong.CheckedChanged += new System.EventHandler(this.ChoseKhong_CheckedChanged);
             // 
-            // label15
+            // infoLabel
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(71, 315);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(659, 15);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "dòng này ko ở trong giao diện nhưng có nhiệm vụ nhắc nhở việc muốn gởi tiền chỉ x" +
-    "uất hiện khi loại tiết kiệm là ko  kỳ hạn";
+            this.infoLabel.AutoSize = true;
+            this.infoLabel.Location = new System.Drawing.Point(96, 323);
+            this.infoLabel.Name = "infoLabel";
+            this.infoLabel.Size = new System.Drawing.Size(222, 15);
+            this.infoLabel.TabIndex = 17;
+            this.infoLabel.Text = "Sổ tiết kiệm này không thể gửi thêm tiền";
             // 
             // button1
             // 
@@ -228,6 +230,7 @@ namespace App1
             this.button1.TabIndex = 18;
             this.button1.Text = "Xác nhận";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -237,27 +240,38 @@ namespace App1
             this.button2.TabIndex = 19;
             this.button2.Text = "Đóng";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // MaphieuLabel
+            // 
+            this.MaphieuLabel.Text = "123";
+            this.MaphieuLabel.AutoSize = true;
+            this.MaphieuLabel.Location = new System.Drawing.Point(579, 60);
+            this.MaphieuLabel.Name = "MaphieuLabel";
+            this.MaphieuLabel.Size = new System.Drawing.Size(0, 15);
+            this.MaphieuLabel.TabIndex = 20;
             // 
             // PhieuGoiTienIn4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MaphieuLabel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.infoLabel);
+            this.Controls.Add(this.ChoseKhong);
+            this.Controls.Add(this.ChoseCo);
+            this.Controls.Add(this.MuonGuiLable);
+            this.Controls.Add(this.LTKLabel);
+            this.Controls.Add(this.SoduLabel);
+            this.Controls.Add(this.DiaChiLabel);
+            this.Controls.Add(this.cmndLabel);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.HotenLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -275,20 +289,48 @@ namespace App1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label HotenLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Label cmndLabel;
+        private System.Windows.Forms.Label DiaChiLabel;
+        private System.Windows.Forms.Label SoduLabel;
+        private System.Windows.Forms.Label LTKLabel;
+        private System.Windows.Forms.Label MuonGuiLable;
+        private System.Windows.Forms.CheckBox ChoseCo;
+        private System.Windows.Forms.CheckBox ChoseKhong;
+        private System.Windows.Forms.Label infoLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+
+
+        public void ChangeValue(string hoten, string cmnd, string diachi, int sodu, string loaitk)
+        {
+            this.HotenLabel.Text = hoten;
+            this.cmndLabel.Text = cmnd;
+            this.DiaChiLabel.Text = diachi;
+            this.SoduLabel.Text = sodu.ToString();
+            this.LTKLabel.Text = loaitk;
+
+            if (loaitk == "khong ky han")
+            {
+                this.infoLabel.Visible = false;
+                this.MuonGuiLable.Visible = true;
+                this.ChoseCo.Visible = true;
+                this.ChoseKhong.Visible = true;
+            }
+            else
+            {
+                this.infoLabel.Visible = true;
+                this.MuonGuiLable.Visible = false;
+                this.ChoseCo.Visible = false;
+                this.ChoseKhong.Visible = false;
+            }
+        }
+
+        public System.Windows.Forms.Label MaphieuLabel;
+
     }
 }

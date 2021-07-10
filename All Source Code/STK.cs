@@ -37,15 +37,13 @@ namespace App1
             DataAccessSoTietKiem DangKy = new DataAccessSoTietKiem();
 
             string invalid_Tinh = "Nhập tỉnh / thành phố";
-            string invalid_Quan = "Nhập quận/huyện";
-            string invalid_Phuong = "Nhập phường/xã";
-            string invalid_DiaChi = "Nhập địa chỉ cụ thể (số nhà, tên tòa nhà, tên đường, tên khu vực)";
             string invalid_LoaiTK = "Chọn loại tiết kiệm";
+            string Loaikyhan = "01";
+
             var isNumeric = int.TryParse(TienGuiBox.Text, out int SoTienGoi);
             bool flag = true;
 
-            if (TinhBox.Text == invalid_Tinh && QuanBox.Text == invalid_Quan
-                && PhuongBox.Text == invalid_Phuong && DiaChiCuThe.Text == invalid_DiaChi)
+            if (TinhBox.Text == invalid_Tinh && DiaChiCuThe.Text.Length == 0)
             {
                 flag = false;
                 MessageBox.Show("Chua nhap dung dia chi!");
@@ -73,9 +71,42 @@ namespace App1
 
             if (flag)
             {
+                // xu ly cmnd
+                string CMND;
+                if (CMNDBox.Text.Length != 0)
+                {
+                    CMND = CMNDBox.Text;
+                }
+                else
+                {
+                    CMND = CMND_k_Box.Text;
+                }
+
+                string diachi = DiaChiCuThe.Text + ", " + PhuongBox.Text + QuanBox.Text + TinhBox.Text;
+                // xu ly loai ky han
+                if (DkyLTKBox.Text == "Không kỳ hạn")
+                {
+                    Loaikyhan = "01";
+                }
+                else if (DkyLTKBox.Text == "Hạn 3 tháng")
+                {
+                    Loaikyhan = "02";
+                }
+                else if (DkyLTKBox.Text == "Hạn 6 tháng")
+                {
+                    Loaikyhan = "03";
+                }
+                // xu ly ngay thang
+                string NgayMoSo;
+                NgayMoSo = dateTimePickerSTK.Value.Date.ToString("dd/MM/yyyy");
+
+                // dang ky khach hang
+                DangKy.SetKH(HotenBox.Text, diachi, CMND);
+
+                // dang ky so tiet kiem
+                DangKy.SetSTK(SoTienGoi, Loaikyhan, NgayMoSo);
                 MessageBox.Show("Dang ky thanh cong");
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)

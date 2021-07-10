@@ -43,7 +43,8 @@ namespace App1
 
         private void AnalyticButton_Click(object sender, EventArgs e)
         {
-
+            BCDS baocao = new();
+            baocao.Show();
         }
 
         private void DSKHButton_Click(object sender, EventArgs e)

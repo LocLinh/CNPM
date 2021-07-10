@@ -30,18 +30,19 @@ namespace App1
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.maphieuLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tiengoiBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.HotenBox = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmndLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -54,14 +55,14 @@ namespace App1
             this.label1.TabIndex = 2;
             this.label1.Text = "Phiếu gởi tiền";
             // 
-            // label2
+            // maphieuLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(434, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Mã phiếu: <hệ thống tự động>";
+            this.maphieuLabel.AutoSize = true;
+            this.maphieuLabel.Location = new System.Drawing.Point(490, 63);
+            this.maphieuLabel.Name = "maphieuLabel";
+            this.maphieuLabel.Size = new System.Drawing.Size(116, 15);
+            this.maphieuLabel.TabIndex = 3;
+            this.maphieuLabel.Text = "<hệ thống tự động>";
             // 
             // label3
             // 
@@ -103,13 +104,13 @@ namespace App1
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 29);
             this.dateTimePicker1.TabIndex = 7;
             // 
-            // textBox1
+            // tiengoiBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(237, 181);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 23);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "Nhập số tiền gởi";
+            this.tiengoiBox.Location = new System.Drawing.Point(237, 181);
+            this.tiengoiBox.Name = "tiengoiBox";
+            this.tiengoiBox.Size = new System.Drawing.Size(200, 23);
+            this.tiengoiBox.TabIndex = 8;
+            this.tiengoiBox.Text = "Nhập số tiền gởi";
             // 
             // label6
             // 
@@ -121,15 +122,6 @@ namespace App1
             this.label6.TabIndex = 9;
             this.label6.Text = "vnđ";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(250, 278);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(153, 15);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Xác nhận gởi tiền với ... vnđ";
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(531, 305);
@@ -138,6 +130,7 @@ namespace App1
             this.button1.TabIndex = 11;
             this.button1.Text = "Đóng";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -148,6 +141,7 @@ namespace App1
             this.button2.TabIndex = 19;
             this.button2.Text = "Xác nhận";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
@@ -159,33 +153,53 @@ namespace App1
             this.label8.TabIndex = 20;
             this.label8.Text = "Người gởi:";
             // 
-            // label9
+            // HotenBox
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(237, 138);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 21);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "<hệ thống tự động>";
+            this.HotenBox.AutoSize = true;
+            this.HotenBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HotenBox.Location = new System.Drawing.Point(237, 138);
+            this.HotenBox.Name = "HotenBox";
+            this.HotenBox.Size = new System.Drawing.Size(152, 21);
+            this.HotenBox.TabIndex = 21;
+            this.HotenBox.Text = "<hệ thống tự động>";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(434, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 15);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Mã phiếu:";
+            // 
+            // cmndLabel
+            // 
+            this.cmndLabel.AutoSize = true;
+            this.cmndLabel.Location = new System.Drawing.Point(456, 143);
+            this.cmndLabel.Name = "cmndLabel";
+            this.cmndLabel.Size = new System.Drawing.Size(43, 15);
+            this.cmndLabel.TabIndex = 23;
+            this.cmndLabel.Text = "CMND";
+            this.cmndLabel.Visible = false;
             // 
             // PhieuGoiTienIn4Tien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 356);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cmndLabel);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.HotenBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tiengoiBox);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.maphieuLabel);
             this.Controls.Add(this.label1);
             this.Name = "PhieuGoiTienIn4Tien";
             this.Text = "Thông tin gởi tiền";
@@ -197,17 +211,18 @@ namespace App1
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label maphieuLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tiengoiBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label HotenBox;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label cmndLabel;
     }
 }
